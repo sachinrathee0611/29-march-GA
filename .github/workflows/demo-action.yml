@@ -1,0 +1,17 @@
+name: Demo_NODE_Action
+on: [push]
+
+jobs:
+  My_First_Job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "This will checkout the code to the runner"
+        uses: actions/checkout@v6
+
+      - name: "Installing node in this step!!"
+        uses: actions/setup-node@v6
+
+      - name: "It can install any useful dependencies!!!"
+        run: node --version
+
+        
